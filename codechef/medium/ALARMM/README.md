@@ -70,7 +70,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T14:41:04.319Z  
+**Submitted:** 2026-10-28T14:52:45.645Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -85,7 +85,17 @@ int main() {
 	    cin>>n>>k;
 	    string s;
 	    cin>>s;
-	    
+	    int alaram=0;
+	    int i=n-1;
+	    while(i>=0){
+	        while(i>=0 && s[i]=='0'){
+	            i--;
+	        }
+	        if(i<0) break;
+	        alaram++;
+	        i=i-k-1;
+	    }
+	    cout<<alaram<<endl;
 	}
 
 }
