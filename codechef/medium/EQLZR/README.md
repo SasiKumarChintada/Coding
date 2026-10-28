@@ -68,7 +68,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T16:22:25.367Z  
+**Submitted:** 2026-10-28T16:23:27.465Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -88,7 +88,7 @@ int main() {
 	    for(int i=1;i<n;i++){
 	        if(nums[i]==nums[i-1]) intial++;
 	    }
-	    long long maxi_left=0;
+	    long long maxi_left=-1e9;
 	    long long ans=-1e9;
 	    for(int i=0;i<n;i++){
 	        long long left=0;
@@ -102,9 +102,9 @@ int main() {
 	            if(nums[i]+1==nums[i+1]) right=1;
 	            else if(nums[i]==nums[i+1]) right=-1;
 	        }
-	        ans=max(ans,initial + maxi_left+right);
+	        ans=max(ans,maxi_left+right);
 	}
-	cout<<ans<<endl;
+	cout<<ans+intial<<endl;
 }
 }
 
