@@ -4,47 +4,51 @@
 
 ## Problem
 
-Given a parentheses string `s` containing only the characters `'('` and `')'`. A parentheses string is  **balanced**  if:
+You are given a parentheses string `s` containing only the characters `'('` and `')'`. A parentheses string is  **balanced**  if it can be formed using the following rules:
 
-- Any left parenthesis '(' must have a corresponding two consecutive right parenthesis '))'.
-- Left parenthesis '(' must go before the corresponding two consecutive right parenthesis '))'.
+- The empty string is balanced.
+- If A is balanced, then '(' + A + '))' is balanced.
+- If A and B are balanced, then their concatenation is balanced.
 
-In other words, we treat `'('` as an opening parenthesis and `'))'` as a closing parenthesis.
+In other words, every left parenthesis `'('` must have a corresponding pair of two consecutive right parentheses `'))'` that comes after it, and every right parenthesis must belong to exactly one such matching pair.
 
-- For example, "())", "())(())))" and "(())())))" are balanced, ")()", "()))" and "(()))" are not balanced.
+For example, `"())"`, `"())(())))"` and `"(())())))"` are balanced, while `")()"`, `"()))"` and `"(()))"` are not balanced.
 
 You can insert the characters `'('` and `')'` at any position of the string to balance it if needed.
 
-Return  *the minimum number of insertions*  needed to make `s` balanced.
+Return the  **minimum**  number of insertions needed to make `s` balanced.
 
  
 
  **Example 1:** 
 
-```
-Input: s = "(()))"
-Output: 1
-Explanation: The second '(' has two matching '))', but the first '(' has only ')' matching. We need to add one more ')' at the end of the string to be "(())))" which is balanced.
+ **Input:**  s = "(()))"
 
-```
+ **Output:**  1
+
+ **Explanation:** 
+
+The second `'('` is matched with two consecutive `')'`, but the first `'('` has only one matching `')'`. We need to insert one more `')'` at the end to make the string `"(())))"`, which is balanced.
 
  **Example 2:** 
 
-```
-Input: s = "())"
-Output: 0
-Explanation: The string is already balanced.
+ **Input:**  s = "())"
 
-```
+ **Output:**  0
+
+ **Explanation:** 
+
+The string is already balanced because its `'('` is followed by two consecutive `')'`, and both right parentheses belong to that matching pair.
 
  **Example 3:** 
 
-```
-Input: s = "))())("
-Output: 3
-Explanation: Add '(' to match the first '))', Add '))' to match the last '('.
+ **Input:**  s = "))())("
 
-```
+ **Output:**  3
+
+ **Explanation:** 
+
+Insert `'('` at the beginning to match the first `'))'`, and insert `'))'` at the end to match the last `'('`. Three insertions are needed in total.
 
  
 
@@ -56,9 +60,9 @@ Explanation: Add '(' to match the first '))', Add '))' to match the last '('.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 87.33%)  
-**Memory:** 15.6 MB (beats 76.37%)  
-**Submitted:** 2026-10-09T18:54:17.241Z  
+**Runtime:** 9 ms (beats 22.88%)  
+**Memory:** 15.5 MB (beats 83.78%)  
+**Submitted:** 2026-10-30T18:46:08.236Z  
 
 ```cpp
 class Solution {
