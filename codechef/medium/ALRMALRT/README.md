@@ -65,7 +65,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T15:12:20.700Z  
+**Submitted:** 2026-11-04T15:35:40.408Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -78,7 +78,19 @@ int main() {
 	while(t--){
 	    int x,y,d;
 	    cin>>x>>y>>d;
-	    
+	    long long i=1,j=1;
+	    while(true){
+	        long long t1=i*x;
+	        long long t1=y*j;
+	        if(abs(t1-t2)<=y){
+	            cout<<max(t1,t2)<<endl;
+	            break;
+	        }
+	        if(t1<t2){
+	            i++;
+	        }
+	        else j++;
+	    }
 	}
 
 }
