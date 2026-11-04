@@ -75,7 +75,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T15:05:43.783Z  
+**Submitted:** 2026-11-04T15:06:04.488Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -102,7 +102,7 @@ int main() {
 	            }
 	        }
 	    }
-	    cout<<maxRow-minRow+1 * maxCol-minCol+1<<endl;
+	    cout<<( maxRow-minRow+1 )* (maxCol-minCol+1)<<endl;
 	}
 }
 
