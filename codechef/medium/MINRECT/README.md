@@ -75,7 +75,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T14:58:02.778Z  
+**Submitted:** 2026-11-04T15:05:43.783Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -88,13 +88,21 @@ int main() {
 	while(t--){
 	    int n,m;
 	    cin>>n>>m;
-	    vector<vector<int>>arr(n,vector<int>(m));
+	    int minRow=n,maxRow=-1;
+	    int minCol=m,maxCol=-1;
 	    for(int i=0;i<n;i++){
+	        string s;
+	        cin>>s;
 	        for(int j=0;j<m;j++){
-	            cin>>arr[i][j];
+	            if(s[j]=='1'){
+	                minRow=min(minRow,i);
+	                maxRow=max(maxRow,i);
+	                minCol=min(minCol,j);
+	                maxCol=max(maxCol,j);
+	            }
 	        }
 	    }
-	    
+	    cout<<maxRow-minRow+1 * maxCol-minCol+1<<endl;
 	}
 }
 
