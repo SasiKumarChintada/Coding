@@ -63,7 +63,7 @@ This leaves no finger free to tap the note at time $6$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T16:19:09.503Z  
+**Submitted:** 2026-11-18T16:20:21.502Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -84,6 +84,9 @@ int ways(int i,int left,int right){
 }
 int main() {
 	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
 	int n,g;
 	cin>>n>>g;
 	vector<int>arr(n);
@@ -92,6 +95,7 @@ int main() {
 	}
 	cout<<ways(0,-1,-1)<<endl;
 	return 0;
+	}
 }
 
 ```
