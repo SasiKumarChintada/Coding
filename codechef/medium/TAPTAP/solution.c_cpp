@@ -3,7 +3,17 @@ using namespace std;
 
 int n,g;
 vector<int>arr;
-int ways(int i,int last,)
+int ways(int i,int left,int right){
+    if(i==n) return 1;
+    int ans=0;
+    if(left==-1 || arr[i]-left>=g){
+        ans+=ways(i+1,arr[i],right);
+    }
+    if(right==-1 || arr[i]-right>=g){
+        ans+=ways(i+1,left,arr[i]);
+    }
+    return ans%998244353;
+}
 int main() {
 	// your code goes here
 	int n,g;
