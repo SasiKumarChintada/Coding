@@ -70,7 +70,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:01:27.871Z  
+**Submitted:** 2026-11-18T15:14:09.875Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -78,6 +78,19 @@ using namespace std;
 
 int main() {
 	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    vector<int>arr(n);
+	    for(int &x:arr){
+	        cin>>x;
+	    }
+	    for(int i=0;i<n;i++){
+	        
+	    }
+	}
 
 }
 
