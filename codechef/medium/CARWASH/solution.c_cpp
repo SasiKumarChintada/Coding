@@ -6,8 +6,6 @@ int main() {
 	int t;
 	cin>>t;
 	while(t--){
-	    int t;
-	    cin>>t;
 	    long long n,m;
 	    cin>>n>>m;
 	    int k;
