@@ -93,7 +93,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:09:41.670Z  
+**Submitted:** 2026-11-18T15:11:10.216Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -104,8 +104,6 @@ int main() {
 	int t;
 	cin>>t;
 	while(t--){
-	    int t;
-	    cin>>t;
 	    long long n,m;
 	    cin>>n>>m;
 	    int k;
