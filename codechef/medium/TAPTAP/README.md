@@ -63,7 +63,7 @@ This leaves no finger free to tap the note at time $6$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T16:17:00.499Z  
+**Submitted:** 2026-11-18T16:19:09.503Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -71,7 +71,17 @@ using namespace std;
 
 int n,g;
 vector<int>arr;
-int ways(int i,int last,)
+int ways(int i,int left,int right){
+    if(i==n) return 1;
+    int ans=0;
+    if(left==-1 || arr[i]-left>=g){
+        ans+=ways(i+1,arr[i],right);
+    }
+    if(right==-1 || arr[i]-right>=g){
+        ans+=ways(i+1,left,arr[i]);
+    }
+    return ans%998244353;
+}
 int main() {
 	// your code goes here
 	int n,g;
