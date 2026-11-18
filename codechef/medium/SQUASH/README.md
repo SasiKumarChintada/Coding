@@ -68,7 +68,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:44:39.388Z  
+**Submitted:** 2026-11-18T14:57:14.346Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -83,7 +83,28 @@ int main() {
 	    cin>>n>>k;
 	    string s;
 	    cin>>s;
-	    
+	    int a=0,b=0;
+	    int ans=0;
+	    int need=0;
+	    for(int i=0;i<n;i++){
+	        if(s[i]=='A'){
+	            if(a==0){
+	                a++;
+	                need++;
+	                b=0;
+	            }
+	        }
+	        else{
+	            if(b==0){
+	                b++;
+	                need++;
+	                a=0;
+	            }
+	        }
+	    }
+	    cout<<need<<" ";
+	    if(need<=k) cout<<"YES\n";
+	    else cout<<"NO\n";
 	}
 
 }
