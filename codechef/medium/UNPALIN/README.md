@@ -70,7 +70,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:14:09.875Z  
+**Submitted:** 2026-11-18T15:46:17.686Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -87,8 +87,25 @@ int main() {
 	    for(int &x:arr){
 	        cin>>x;
 	    }
-	    for(int i=0;i<n;i++){
-	        
+	    int l=0,r=n-1;
+	    while(l<r){
+	        if(arr[l]!=arr[r]){
+	            break;
+	        }
+	        l++;
+	        r--;
+	    }
+	    if(l>=r){
+	        cout<<"NO\n";
+	    }
+	    else{
+	        cout<<"YES ";
+	        for(int x=1;x<=n;x++){
+	            if(x!=arr[l] && x!=arr[r]){
+	                cout<<x<<endl;
+	                break;
+	            }
+	        }
 	    }
 	}
 
