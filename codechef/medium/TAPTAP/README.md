@@ -63,35 +63,37 @@ This leaves no finger free to tap the note at time $6$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T16:19:23.492Z  
+**Submitted:** 2026-11-18T16:23:05.505Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int n,g;
-vector<int>arr;
-int ways(int i,int left,int right){
+int ways(int i,int left,int right,int n,int g, const vector<int>&arr){
     if(i==n) return 1;
     int ans=0;
     if(left==-1 || arr[i]-left>=g){
-        ans+=ways(i+1,arr[i],right);
+        ans+=ways(i+1,arr[i],right,n,g,arr);
     }
     if(right==-1 || arr[i]-right>=g){
-        ans+=ways(i+1,left,arr[i]);
+        ans+=ways(i+1,left,arr[i],n,g,arr);
     }
     return ans%998244353;
 }
 int main() {
 	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
 	int n,g;
 	cin>>n>>g;
 	vector<int>arr(n);
 	for(int i=0;i<n;i++){
 	    cin>>arr[i];
 	}
-	cout<<ways(0,-1,-1)<<endl;
+	cout<<ways(0,-1,-1,n,g,arr)<<endl;
 	return 0;
+	}
 }
 
 ```
