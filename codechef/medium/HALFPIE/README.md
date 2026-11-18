@@ -63,7 +63,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:40:15.256Z  
+**Submitted:** 2026-11-18T14:41:10.641Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -82,9 +82,10 @@ int main() {
 	    }
 	    int sum=0;
 	    int mini=INT_MAX;
-	    for(int i=0;i<n;i+=2){
-	        sum+=arr[i]+arr[i+1];
+	    for(int i=1;i<n;i++){
+	        sum+=arr[i]+arr[i-1];
 	        mini=min(sum,mini);
+	        sum=0;
 	    }
 	    cout<<mini<<endl;
 	    int total=std::accumulate(arr.begin(), arr.end(), 0);
