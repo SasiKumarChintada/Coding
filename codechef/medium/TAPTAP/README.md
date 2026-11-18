@@ -63,15 +63,25 @@ This leaves no finger free to tap the note at time $6$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T16:13:49.507Z  
+**Submitted:** 2026-11-18T16:17:00.499Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
+int n,g;
+vector<int>arr;
+int ways(int i,int last,)
 int main() {
 	// your code goes here
-
+	int n,g;
+	cin>>n>>g;
+	vector<int>arr(n);
+	for(int i=0;i<n;i++){
+	    cin>>arr[i];
+	}
+	cout<<ways(0,-1,-1)<<endl;
+	return 0;
 }
 
 ```
