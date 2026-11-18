@@ -63,7 +63,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:41:10.641Z  
+**Submitted:** 2026-11-18T14:41:47.402Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -87,9 +87,9 @@ int main() {
 	        mini=min(sum,mini);
 	        sum=0;
 	    }
-	    cout<<mini<<endl;
+	    //cout<<mini<<endl;
 	    int total=std::accumulate(arr.begin(), arr.end(), 0);
-	    //cout<<total-(sum)/2<<endl;
+	    cout<<total-(mini)/2<<endl;
 	}
 
 }
