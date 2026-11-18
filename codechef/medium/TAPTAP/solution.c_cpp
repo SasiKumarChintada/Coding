@@ -24,6 +24,6 @@ int main() {
 	    cin>>arr[i];
 	}
 	cout<<ways(0,-1,-1,n,g,arr)<<endl;
-	return 0;
 	}
+	return 0;
 }
