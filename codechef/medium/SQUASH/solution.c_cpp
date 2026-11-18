@@ -29,7 +29,7 @@ int main() {
 	            }
 	        }
 	    }
-	    cout<<need<<" ";
+	    //cout<<need<<" ";
 	    if(need<=k) cout<<"YES\n";
 	    else cout<<"NO\n";
 	}
