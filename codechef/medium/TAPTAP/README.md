@@ -63,7 +63,7 @@ This leaves no finger free to tap the note at time $6$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T16:23:05.505Z  
+**Submitted:** 2026-11-18T16:23:43.950Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -92,8 +92,8 @@ int main() {
 	    cin>>arr[i];
 	}
 	cout<<ways(0,-1,-1,n,g,arr)<<endl;
-	return 0;
 	}
+	return 0;
 }
 
 ```
