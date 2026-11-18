@@ -68,7 +68,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T14:57:14.346Z  
+**Submitted:** 2026-11-18T14:57:28.547Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -102,7 +102,7 @@ int main() {
 	            }
 	        }
 	    }
-	    cout<<need<<" ";
+	    //cout<<need<<" ";
 	    if(need<=k) cout<<"YES\n";
 	    else cout<<"NO\n";
 	}
